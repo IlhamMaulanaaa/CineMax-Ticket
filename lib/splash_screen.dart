@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:cinemax_hakatim/home.dart';
 import 'package:cinemax_hakatim/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 4), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => LoginPage()));
+          context, MaterialPageRoute(builder: (context) => Homepage()));
     });
   }
 
