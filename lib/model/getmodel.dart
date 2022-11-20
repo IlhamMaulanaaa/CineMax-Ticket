@@ -1,4 +1,5 @@
-import 'package:cinemax_hakatim/model/model.dart';
+import 'package:cinemax_hakatim/detail.dart';
+import 'package:cinemax_hakatim/model/movies.dart';
 import 'package:flutter/material.dart';
 
 class GetMovie extends StatelessWidget {
@@ -10,8 +11,8 @@ class GetMovie extends StatelessWidget {
     return Container(
       child: GestureDetector(
         onTap: () {
-          // Navigator.of(context).push(
-          //     MaterialPageRoute(builder: (context) => DetailPage1(movie)));
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) =>  detail(movie: movie)));
         },
         child: Card(
           shape: RoundedRectangleBorder(
@@ -22,7 +23,7 @@ class GetMovie extends StatelessWidget {
             width: 120,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(movie.imageURL), fit: BoxFit.cover),
+                  image: AssetImage(movie.imageUrl), fit: BoxFit.cover),
             ),
           ),
         ),
