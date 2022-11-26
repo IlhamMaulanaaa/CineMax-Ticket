@@ -1,5 +1,7 @@
+import 'package:cinemax_hakatim/SeatPage.dart';
 import 'package:cinemax_hakatim/home.dart';
 import 'package:cinemax_hakatim/model/movies.dart';
+import 'package:cinemax_hakatim/ui/chooseseat.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
@@ -69,7 +71,7 @@ class _detailState extends State<detail> {
                                   child: Column(
                                     children: [
                                       Transform.translate(
-                                        offset: const Offset(-36, -140),
+                                        offset: const Offset(-20, -140),
                                         child: Text(
                                           widget.movie.title,
                                           style: TextStyle(
@@ -193,45 +195,80 @@ class _detailState extends State<detail> {
     decoration: BoxDecoration(
       borderRadius: BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50))
     ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            widget.movie.title,
-            style: TextStyle(fontSize: 16),
-          ),
-          Icon(Icons.person),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Container(
-              height: 30,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.pink,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(6),
+      child: Container(
+        color: Colors.white54,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Transform.translate(offset: const Offset(-85, 160),
+              child: Text(
+                widget.movie.title,
+                style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
+              ),
+            ),
+            Transform.translate(offset: const Offset(-150, 180),
+              child: Icon(
+                  Icons.person
+              ),
+            ),
+            Transform.translate(offset: const Offset(-80, 160),
+              child: Text(
+                widget.movie.price,
+                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+              ),
+            ),
+            Transform.translate(offset: const Offset(-150, 175),
+              child: Icon(
+                  Icons.airplane_ticket
+              ),
+            ),
+            Transform.translate(offset: const Offset(-80, 150),
+              child: Text(
+                widget.movie.subtitle,
+                style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+              ),
+            ),
+            Text("\n\n"),
+            Transform.translate(
+              offset: const Offset(100, 0),
+              child: Image.asset(
+                widget.movie.imageUrl2.toString(),
+                height: 120,
+              ),
+            ),
+            Text("\n\n"),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                height: 30,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.pink,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(6),
+                    ),
                   ),
-                ),
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => Homepage()));
-                },
-                child: Center(
-                  child: Text(
-                    'Buy Ticket',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) => ChooseSeat()));
+                  },
+                  child: Center(
+                    child: Text(
+                      'Buy Ticket',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
-          ),
-          Text("\n\n"),
-        ],
+            Text("\n\n"),
+          ],
+        ),
       )
   );
 }

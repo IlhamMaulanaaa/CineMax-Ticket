@@ -12,7 +12,7 @@ class Movie {
   static List<Movie> generateMovie() {
     return [
       Movie(
-          'SPIDERMAN',
+          'SPIDERMAN-NWH',
           'spiderman',
           'Rp. 50.000.00',
           'For the first time in the history of the big screen Spider-Man, the true identity of this friendly hero is exposed, thus making his responsibilities as a super power clash with his normal life, and putting everyone closest to him in the most threatened position.',

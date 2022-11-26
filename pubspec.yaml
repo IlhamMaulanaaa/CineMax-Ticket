@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts:
   carousel_slider: ^4.1.1
+  pull_to_refresh: 1.6.3
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,7 @@ flutter:
      - assets/image/bgfilm.png
      - assets/image/logocinemax.png
      - assets/image/backgroundfilm.png
+     - assets/image/backgroundest.png
   #   - image/a_dot_burr.jpeg
   #   - image/a_dot_ham.jpeg
 
