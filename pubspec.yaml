@@ -73,6 +73,14 @@ flutter:
      - assets/image/logocinemax.png
      - assets/image/backgroundfilm.png
      - assets/image/backgroundest.png
+     - assets/image/bgnew.png
+     - assets/image/bgpayment.png
+     - assets/image/danalogo.png
+     - assets/image/ovologo.png
+     - assets/image/gopaylogo.png
+     - assets/image/checksuccess.png
+
+
   #   - image/a_dot_burr.jpeg
   #   - image/a_dot_ham.jpeg
 

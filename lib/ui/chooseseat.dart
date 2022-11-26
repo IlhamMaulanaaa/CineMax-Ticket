@@ -1,3 +1,4 @@
+import 'package:cinemax_hakatim/payment/paymentpage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -101,9 +102,7 @@ class _ChooseSeatState extends State<ChooseSeat> {
         decoration: BoxDecoration(
             image: DecorationImage(
                 fit: BoxFit.cover,
-                colorFilter:
-                ColorFilter.mode(Colors.black45, BlendMode.darken),
-                image: AssetImage("assets/image/backgroundest.png"))),
+                image: AssetImage("assets/image/bgnew.png"))),
         child: Padding(
           padding: const EdgeInsets.only(top: 65),
           child: Column(
@@ -248,7 +247,7 @@ class _ChooseSeatState extends State<ChooseSeat> {
                     onPressed: () {
                       setSelectedToBooked();
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => ChooseSeat()));
+                          builder: (context) => PaymentPage()));
                     },
                     child: Center(
                       child: Text(
