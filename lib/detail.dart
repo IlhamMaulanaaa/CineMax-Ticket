@@ -69,6 +69,7 @@ class _detailState extends State<detail> {
                               Container(
                                   height: 200,
                                   child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
                                       Transform.translate(
                                         offset: const Offset(-20, -140),
