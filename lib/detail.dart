@@ -33,7 +33,7 @@ class _detailState extends State<detail> {
             },
           ),
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0XFF141414),
         body: SingleChildScrollView(
           child: Container(
             child: Column(
@@ -79,6 +79,7 @@ class _detailState extends State<detail> {
                                               color: Color(0xffFFD600),
                                               fontWeight: FontWeight.w700,
                                               fontSize: 22),
+                                          textAlign: TextAlign.left,
                                         ),
                                       ),
                                       Transform.translate(
@@ -117,14 +118,14 @@ class _detailState extends State<detail> {
                               // Hero(
                               //     tag: widget.movie.imageUrl2,
                                  Transform.translate(
-                                    offset: const Offset(0, -200),
+                                    offset: const Offset(0, -190),
                                     child: Image.asset(
                                       widget.movie.imageUrl2.toString(),
                                       height: 120,
                                     ),
                                   ),
                               Transform.translate(
-                                    offset: const Offset(0, -200),
+                                    offset: const Offset(0, -190),
                                     child: Image.asset(
                                     "assets/image/jumlah.png",
                                       height: 120,
@@ -197,42 +198,42 @@ class _detailState extends State<detail> {
       borderRadius: BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50))
     ),
       child: Container(
-        color: Colors.white54,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            Transform.translate(offset: const Offset(-85, 160),
+            Transform.translate(offset: const Offset(-85, 40),
               child: Text(
                 widget.movie.title,
                 style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),
               ),
             ),
-            Transform.translate(offset: const Offset(-150, 180),
+            Transform.translate(offset: const Offset(-150, 60),
               child: Icon(
                   Icons.person
               ),
             ),
-            Transform.translate(offset: const Offset(-80, 160),
+            Transform.translate(offset: const Offset(-80, 40),
               child: Text(
                 widget.movie.price,
                 style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
               ),
             ),
-            Transform.translate(offset: const Offset(-150, 175),
+            Transform.translate(offset: const Offset(-150, 60),
               child: Icon(
                   Icons.airplane_ticket
               ),
             ),
-            Transform.translate(offset: const Offset(-80, 150),
+            Transform.translate(offset: const Offset(-80, 40),
               child: Text(
                 widget.movie.subtitle,
                 style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.start
               ),
             ),
             Text("\n\n"),
             Transform.translate(
-              offset: const Offset(100, 0),
+              offset: const Offset(100, -120),
               child: Image.asset(
                 widget.movie.imageUrl2.toString(),
                 height: 120,

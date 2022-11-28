@@ -2,6 +2,7 @@ import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cinemax_hakatim/model/getmodel.dart';
 import 'package:cinemax_hakatim/model/movies.dart';
+import 'package:cinemax_hakatim/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -59,11 +60,11 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     String selectedValue = "Kudus";
     return Scaffold(
-      backgroundColor: const Color(0XFF282828),
+      backgroundColor: const Color(0XFF141414),
       appBar: AppBar(
         elevation: 0,
         automaticallyImplyLeading: false,
-        backgroundColor: Color(0XFF282828),
+        backgroundColor: Color(0XFF141414),
         title: Row(children: const [
           Icon(
             Icons.movie,
@@ -77,12 +78,29 @@ class _HomepageState extends State<Homepage> {
             style: TextStyle(color: Colors.white),
           ),
           Spacer(),
-          Icon(Icons.notifications, color: Colors.white),
+
+          // GestureDetector(
+          //   onTap: () { /* Write listener code here */ },
+          //   child: Icon(
+          //     Icons.menu,  // add custom icons also
+          //   ),
+          // ),
+          // Icon(Icons.notifications, color: Colors.white),
+          // IconButton(
+          //   onPressed: () => Navigator.of(context)
+          //     .push(MaterialPageRoute(builder: (context) => const notification())),
+          //   icon: Icon(Icons.notifications),
+          // ),
           SizedBox(
             width: 10,
           ),
           Icon(Icons.menu, color: Colors.white)
         ]),
+        actions: [IconButton(onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(
+                builder:(context) => notification(),));
+        }, icon: Icon(Icons.notifications)),]
       ),
       body: SafeArea(
         child: SingleChildScrollView(
